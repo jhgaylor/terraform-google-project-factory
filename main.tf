@@ -14,21 +14,10 @@
  * limitations under the License.
  */
 
-/*****************************************
-  Organization info retrieval
- *****************************************/
-module "gsuite_group" {
-  source = "modules/gsuite_group"
-
-  domain = "${var.domain}"
-  name   = "${var.group_name}"
-  org_id = "${var.org_id}"
-}
-
 module "project-factory" {
   source = "modules/core_project_factory"
 
-  group_email                 = "${module.gsuite_group.email}"
+  group_email                 = "${var.group_email}"
   group_role                  = "${var.group_role}"
   lien                        = "${var.lien}"
   manage_group                = "${var.group_name != "" ? "true" : "false"}"

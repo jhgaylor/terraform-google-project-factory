@@ -51,6 +51,11 @@ variable "group_name" {
   default     = ""
 }
 
+variable "group_email" {
+  description = "An Email IDK why"
+  default     = ""
+}
+
 variable "group_role" {
   description = "The role to give the controlling group (group_name) over the project (defaults to project editor)"
   default     = "roles/editor"

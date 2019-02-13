@@ -22,13 +22,13 @@ output "project_number" {
   value = "${module.project-factory.project_number}"
 }
 
-output "domain" {
-  value       = "${module.gsuite_group.domain}"
-  description = "The organization's domain"
-}
+# output "domain" {
+#   value       = "${module.gsuite_group.domain}"
+#   description = "The organization's domain"
+# }
 
 output "group_email" {
-  value       = "${module.gsuite_group.email}"
+  value       = "${var.group_email}"
   description = "The email of the GSuite group with group_name"
 }
 
